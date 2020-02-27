@@ -21,6 +21,28 @@
                     "to": [{ "key_code": "right_arrow", "modifiers": [ "left_alt" ] }]
                 }
             ]
+        },
+
+        {
+            "description": "Post page_up if left_control + w is pressed",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": <%= from("w", [ "left_control" ], [ "any" ]) %>,
+                "to": [ { "key_code": "page_up" } ]
+              }
+            ]
+        },
+
+        {
+            "description": "Post page_up if left_control + v is pressed",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": <%= from("v", [ "left_control" ], [ "any" ]) %>,
+                "to": [ { "key_code": "page_down" } ]
+              }
+            ]
         }
     ]
 }
